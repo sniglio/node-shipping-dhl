@@ -1,0 +1,66 @@
+{
+  "name": "node-shipping-dhl",
+  "version": "1.0.0",
+  "description": "DHL API for Node.JS",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "npm run clean && webpack --progress --colors",
+    "coverage": "nyc npm t",
+    "jshint": "jshint ./",
+    "linters": "npm run jshint && npm run tslint",
+    "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts",
+    "test": "mocha -r ts-node/register test/*.ts",
+    "tslint": "tslint ./lib/"
+  },
+  "license": "ISC",
+  "author": "Vincent Tellier <vincent@great-seal.co>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vtllr/node-shipping-dhl"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/body-parser": "1.16.3",
+    "@types/chai": "4.0.3",
+    "@types/chai-xml": "0.3.1",
+    "@types/dotenv": "4.0.0",
+    "@types/express": "4.0.35",
+    "@types/mocha": "2.2.41",
+    "@types/winston": "2.3.3",
+    "awesome-typescript-loader": "3.2.3",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "body-parser": "1.17.2",
+    "chai": "4.0.2",
+    "chai-http": "3.0.0",
+    "chai-things": "0.2.0",
+    "chai-xml": "0.3.1",
+    "dotenv": "4.0.0",
+    "express": "4.15.3",
+    "istanbul": "0.4.5",
+    "jshint": "2.9.4",
+    "mocha": "3.4.2",
+    "nyc": "11.1.0",
+    "ts-node": "3.0.4",
+    "tslint": "5.4.2",
+    "typescript": "2.3.4",
+    "webpack": "2.6.1"
+  },
+  "nyc": {
+    "include": [
+      "lib/*.ts"
+    ],
+    "exclude": [
+      "node_modules"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "all": true
+  }
+}
