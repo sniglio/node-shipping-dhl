@@ -4,7 +4,7 @@
   "description": "DHL API for Node.JS",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "npm run clean && webpack --progress --colors",
+    "build": "webpack --progress --colors",
     "coverage": "nyc npm t",
     "jshint": "jshint ./",
     "linters": "npm run jshint && npm run tslint",
@@ -41,6 +41,7 @@
     "chai-http": "3.0.0",
     "chai-things": "0.2.0",
     "chai-xml": "0.3.1",
+    "clean-webpack-plugin": "0.1.17",
     "dotenv": "4.0.0",
     "express": "4.16.1",
     "istanbul": "0.4.5",
