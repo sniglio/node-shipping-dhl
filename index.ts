@@ -20,9 +20,7 @@ export class Server {
       env: process.env.DHL_ENV,
       debug: process.env.DHL_DEBUG === 'true' ? true : false,
       account: process.env.DHL_ACC,
-      id: process.env.DHL_ID,
-      secret: process.env.DHL_SECRET,
-      username: process.env.DHL_USR,
+      siteID: process.env.DHL_SID,
       password: process.env.DHL_PWD
     });
 

@@ -10,14 +10,12 @@ import * as parser from 'xml2js';
 import { logger } from './utils/logger';
 
 export default class DHLAPI {
-  private account: string = this.params.account;
   private env: string = this.params.env;
   private debug: boolean = this.params.debug;
-  private id: string = this.params.id;
   private url: string = this.env === 'production' ? 'https://xmlpi-ea.dhl.com/XMLShippingServlet' : 'https://xmlpitest-ea.dhl.com/XMLShippingServlet';
+  private account: string = this.params.account;
+  private siteID: string = this.params.siteID;
   private password: string = this.params.password;
-  private secret: string = this.params.secret;
-  private username: string = this.params.username;
 
   constructor(
     private params: any
@@ -156,7 +154,7 @@ export default class DHLAPI {
         ServiceHeader: {
           MessageTime: moment().format(),
           MessageReference: crypto.randomBytes(16).toString('hex'),
-          SiteID: this.id,
+          SiteID: this.siteID,
           Password: this.password
         }
       }
