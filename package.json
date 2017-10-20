@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "crypto": "1.0.1",
-    "moment": "2.19.0",
+    "moment": "2.19.1",
     "path": "0.12.7",
     "request": "2.83.0",
     "winston": "2.4.0",
@@ -32,7 +32,7 @@
     "@types/chai-xml": "0.3.1",
     "@types/dotenv": "4.0.1",
     "@types/express": "4.0.37",
-    "@types/mocha": "2.2.41",
+    "@types/mocha": "2.2.43",
     "@types/winston": "2.3.6",
     "awesome-typescript-loader": "3.2.3",
     "babel-plugin-add-module-exports": "0.2.1",
@@ -43,7 +43,7 @@
     "chai-xml": "0.3.1",
     "clean-webpack-plugin": "0.1.17",
     "dotenv": "4.0.0",
-    "express": "4.16.1",
+    "express": "4.16.2",
     "istanbul": "0.4.5",
     "jshint": "2.9.5",
     "mocha": "4.0.1",
@@ -51,7 +51,7 @@
     "ts-node": "3.3.0",
     "tslint": "5.7.0",
     "typescript": "2.5.3",
-    "webpack": "3.6.0"
+    "webpack": "3.8.1"
   },
   "nyc": {
     "include": [
