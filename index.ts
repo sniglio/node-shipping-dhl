@@ -17,7 +17,7 @@ export class Server {
   private configureRoutes(app: express.Express) {
 
     const dhl = new DHLAPI({
-      env: process.env.DHL_ENV,
+      environment: process.env.DHL_ENV,
       debug: process.env.DHL_DEBUG === 'true' ? true : false,
       account: process.env.DHL_ACC,
       siteID: process.env.DHL_SID,

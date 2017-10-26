@@ -10,9 +10,9 @@ import * as parser from 'xml2js';
 import { logger } from './utils/logger';
 
 export default class DHLAPI {
-  private env: string = this.params.env;
+  private environment: string = this.params.environment;
   private debug: boolean = this.params.debug;
-  private url: string = this.env === 'production' ? 'https://xmlpi-ea.dhl.com/XMLShippingServlet' : 'https://xmlpitest-ea.dhl.com/XMLShippingServlet';
+  private url: string = this.environment === 'production' ? 'https://xmlpi-ea.dhl.com/XMLShippingServlet' : 'https://xmlpitest-ea.dhl.com/XMLShippingServlet';
   private account: string = this.params.account;
   private siteID: string = this.params.siteID;
   private password: string = this.params.password;
