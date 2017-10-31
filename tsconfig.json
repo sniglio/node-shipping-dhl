@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES6",
+    "declaration": false,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "listFiles": false,
+    "pretty": true,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitUseStrict": false,
+    "allowSyntheticDefaultImports": true,
+    "suppressExcessPropertyErrors": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "skipDefaultLibCheck": true,
+    "noEmitHelpers": false,
+    "isolatedModules": false,
+    "strictNullChecks": false,
+    "outDir": "dist",
+    "baseUrl": "lib",
+    "lib": [
+      "es5",
+      "es6",
+      "dom"
+    ]
+  },
+  "compileOnSave": true,
+  "buildOnSave": true,
+  "exclude": [
+    "node_modules"
+  ],
+  "lib": [
+    "es2015"
+  ],
+  "typeRoots": [
+    "../node_modules/@types"
+  ],
+  "types": []
+}
