@@ -20,10 +20,12 @@
   },
   "dependencies": {
     "crypto": "1.0.1",
+    "lodash": "^4.17.4",
     "moment": "2.19.1",
     "path": "0.12.7",
     "request": "2.83.0",
     "winston": "2.4.0",
+    "xml2js": "^0.4.19",
     "xmlbuilder": "9.0.4"
   },
   "devDependencies": {

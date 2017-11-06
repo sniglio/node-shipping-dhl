@@ -80,7 +80,8 @@ export default class DHLAPI {
 
   public getServices(params: any, cb: any) {
 
-    params.GetCapability = _merge(this.getRequestHeader(), params.GetCapability);
+    if(params.GetCapability) params.GetCapability = _merge(this.getRequestHeader(), params.GetCapability);
+    if(params.GetQuote) params.GetQuote = _merge(this.getRequestHeader(), params.GetQuote);
 
     const xml = builder.create({
       [`p:DCTRequest`]: params
