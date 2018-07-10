@@ -16,6 +16,8 @@ export default class DHLAPI {
   private account: string = this.params.account;
   private siteID: string = this.params.siteID;
   private password: string = this.params.password;
+  private softwareName: string = this.params.softwareName;
+  private softwareVersion: string = this.params.softwareVersion;
 
   constructor(
     private params: any
@@ -31,7 +33,7 @@ export default class DHLAPI {
       .att('xmlns:req', 'http://www.dhl.com')
       .att('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
       .att('xmlns:schemaLocation', `http://www.dhl.com book-pickup-global-req.xsd`)
-      .att('schemaVersion', `1.0`)
+      .att('schemaVersion', `3.0`)
       .end({ pretty: true });
 
     this.request(xml, (err, res) => {
@@ -50,7 +52,7 @@ export default class DHLAPI {
       .att('xmlns:req', 'http://www.dhl.com')
       .att('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
       .att('xmlns:schemaLocation', `http://www.dhl.com cancel-pickup-global-req.xsd`)
-      .att('schemaVersion', `1.0`)
+      .att('schemaVersion', `3.0`)
       .end({ pretty: true });
 
     this.request(xml, (err, res) => {
@@ -69,7 +71,7 @@ export default class DHLAPI {
       .att('xmlns:req', 'http://www.dhl.com')
       .att('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
       .att('xmlns:schemaLocation', `http://www.dhl.com ship-val-global-req.xsd`)
-      .att('schemaVersion', `5.0`)
+      .att('schemaVersion', `6.2`)
       .end({ pretty: true });
 
     this.request(xml, (err, res) => {
@@ -118,9 +120,6 @@ export default class DHLAPI {
   }
 
   private request(xml: any, cb) {
-
-    console.log('xml', xml);
-
     request.post({
       url: this.url,
       body: xml,
@@ -157,6 +156,10 @@ export default class DHLAPI {
           MessageReference: crypto.randomBytes(16).toString('hex'),
           SiteID: this.siteID,
           Password: this.password
+        },
+        MetaData: {
+          SoftwareName: this.softwareName,
+          SoftwareVersion: this.softwareVersion,
         }
       }
     };
