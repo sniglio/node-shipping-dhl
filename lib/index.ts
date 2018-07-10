@@ -52,7 +52,7 @@ export default class DHLAPI {
       .att('xmlns:req', 'http://www.dhl.com')
       .att('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance')
       .att('xmlns:schemaLocation', `http://www.dhl.com cancel-pickup-global-req.xsd`)
-      .att('schemaVersion', `1.0`)
+      .att('schemaVersion', `3.0`)
       .end({ pretty: true });
 
     this.request(xml, (err, res) => {
